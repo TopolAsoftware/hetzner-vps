@@ -1,29 +1,29 @@
 
-variable "hcloud_server_name" {
+variable "server_name" {
    description = "Project name of web server (optional)"
    default = "hcloud-terraform"
 }
 
-variable "hcloud_server_image" {
+variable "server_image" {
    description = "OS image (optional)"
    default = "debian-10"
 }
 
-variable "hcloud_server_type" {
+variable "server_type" {
    description = "HCloud plan (optional)"
    default = "cx11"
 }
 
-variable "hcloud_datacenter" {
+variable "datacenter" {
    description = "Hetzner Data Center (optional)"
    default = "nbg1-dc3"
 }
 
-variable "hcloud_ssh_key" {
+variable "ssh_key" {
    description = "SSH public key for root user (required)"
 }
 
-variable "hcloud_userdata" {
+variable "userdata" {
    description = "cloud-init user data block (required)"
 }
 

@@ -1,14 +1,13 @@
 
 output "id" {
-   value = hcloud_server.web-server.id
+   value = hcloud_server.vps.id
 }
 output "name" {
-   value = hcloud_server.web-server.name
+   value = hcloud_server.vps.name
 }
 output "ipv4" {
-   value = hcloud_server.web-server.ipv4_address
+   value = hcloud_server.vps.ipv4_address
 }
 output "ipv6" {
-   value = hcloud_server.web-server.ipv6_address
+   value = hcloud_server.vps.ipv6_address
 }
-
