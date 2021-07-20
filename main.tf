@@ -5,18 +5,6 @@
 ###
 ########################################################################
 ########################################################################
-### terraform requires declaration of required providers in each module
-###
-
-terraform {
-  required_providers {
-    hcloud = {
-      source  = "hetznercloud/hcloud" 
-    }
- }
-}
-
-########################################################################
 ### Create Hetzner Cloud VPS
 ###
 

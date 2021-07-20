@@ -1,4 +1,3 @@
-
 variable "server_name" {
    description = "Project name of web server (optional)"
    default = "hcloud-terraform"
