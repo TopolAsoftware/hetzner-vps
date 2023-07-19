@@ -5,7 +5,7 @@ variable "server_name" {
 
 variable "server_image" {
    description = "OS image (optional)"
-   default = "debian-10"
+   default = "debian-11"
 }
 
 variable "server_type" {
@@ -16,6 +16,11 @@ variable "server_type" {
 variable "datacenter" {
    description = "Hetzner Data Center (optional)"
    default = "nbg1-dc3"
+}
+
+variable "ipv4_enabled" {
+   description = "Enable assign ipv4 address"
+   default = true
 }
 
 variable "ssh_key" {

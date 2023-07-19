@@ -26,6 +26,11 @@ resource "hcloud_server" "vps" {
   datacenter  = var.datacenter
   user_data   = var.userdata
   ssh_keys    = [var.ssh_key]
+
+  public_net {
+    ipv4_enabled = var.ipv4_enabled
+    ipv6_enabled = true
+  }
 }
 
 ########################################################################
