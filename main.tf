@@ -29,8 +29,29 @@ resource "hcloud_server" "vps" {
 
   public_net {
     ipv4_enabled = var.ipv4_enabled
-    ipv6_enabled = true
+    ipv6_enabled = var.ipv4_enabled
   }
 }
+
+########################################################################
+### Set reverse record
+###
+
+resource "hcloud_rdns" "ptr4" {
+  count = var.server_domain == "none" || var.ipv4_enabled != true ? 0 : 1
+
+  server_id  = hcloud_server.vps.id
+  ip_address = hcloud_server.vps.ipv4_address
+  dns_ptr    = var.server_domain
+}
+
+resource "hcloud_rdns" "ptr6" {
+  count = var.server_domain == "none" || var.ipv6_enabled != true ? 0 : 1
+
+  server_id  = hcloud_server.vps.id
+  ip_address = hcloud_server.vps.ipv6_address
+  dns_ptr    = var.server_domain
+}
+
 
 ########################################################################

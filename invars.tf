@@ -13,6 +13,11 @@ variable "server_type" {
    default = "cx11"
 }
 
+variable "server_domain" {
+   description = "Set rdns ptr resord for server domain (optional)"
+   default = "none"
+}
+
 variable "datacenter" {
    description = "Hetzner Data Center (optional)"
    default = "nbg1-dc3"
@@ -20,6 +25,11 @@ variable "datacenter" {
 
 variable "ipv4_enabled" {
    description = "Enable assign ipv4 address"
+   default = true
+}
+
+variable "ipv6_enabled" {
+   description = "Enable assign ipv6 address"
    default = true
 }
 
