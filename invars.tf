@@ -15,7 +15,7 @@ variable "server_type" {
 
 variable "server_domain" {
    description = "Set rdns ptr resord for server domain (optional)"
-   default = "none"
+   default = ""
 }
 
 variable "datacenter" {

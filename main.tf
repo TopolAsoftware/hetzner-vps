@@ -38,7 +38,7 @@ resource "hcloud_server" "vps" {
 ###
 
 resource "hcloud_rdns" "ptr4" {
-  count = var.server_domain == "none" || var.ipv4_enabled != true ? 0 : 1
+  count = var.server_domain == "" || var.ipv4_enabled != true ? 0 : 1
 
   server_id  = hcloud_server.vps.id
   ip_address = hcloud_server.vps.ipv4_address
@@ -46,7 +46,7 @@ resource "hcloud_rdns" "ptr4" {
 }
 
 resource "hcloud_rdns" "ptr6" {
-  count = var.server_domain == "none" || var.ipv6_enabled != true ? 0 : 1
+  count = var.server_domain == "" || var.ipv6_enabled != true ? 0 : 1
 
   server_id  = hcloud_server.vps.id
   ip_address = hcloud_server.vps.ipv6_address
