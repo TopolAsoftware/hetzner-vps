@@ -11,3 +11,6 @@ output "ipv4" {
 output "ipv6" {
    value = hcloud_server.vps.ipv6_address
 }
+output "ipv6_network" {
+  value = hcloud_server.vps.ipv6_network
+}
