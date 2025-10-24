@@ -41,3 +41,8 @@ variable "userdata" {
    description = "cloud-init user data block (required)"
 }
 
+variable "server_labels" {
+   description = "Labbels added to the server"
+   type = map
+   default = null
+}

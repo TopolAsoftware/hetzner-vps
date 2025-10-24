@@ -31,6 +31,7 @@ resource "hcloud_server" "vps" {
     ipv4_enabled = var.ipv4_enabled
     ipv6_enabled = var.ipv6_enabled
   }
+  labels = var.server_labels
 }
 
 ########################################################################
